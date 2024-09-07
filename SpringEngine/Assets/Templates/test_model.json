@@ -1,0 +1,44 @@
+{
+  "Components": {
+    "TransformComponent": {
+      "Position": [ 0.0, 0.0, 0.0 ],
+      "Rotation": [ 0.0, 0.0, 0.0, 1.0 ],
+      "Scale": [ 1.0, 1.0, 1.0 ]
+    },
+    "ModelComponent": {
+      "CastShadow": true,
+      "FileName": "../../Assets/Models/Finals/Samba/Samba.model",
+      "Animation": [
+        "../../Assets/Models/Finals/Samba/Samba.animset"
+      ]
+    },
+    "AnimatorComponent": {
+      "StartPlayIndex": 0
+    },
+    "CustomDebugDrawComponent": {
+      "Slices": 30,
+      "Rings": 30,
+      "Radius": 1.0,
+      "Position": [ 0.0, 0.5, 0.0 ],
+      "Color": [ 1.0, 1.0, 0.0, 1.0 ]
+    },
+    "RigidBodyComponent": {
+      "Mass": 10.0,
+      "ColliderData": {
+        "Shape": "Hull",
+        "HalfExtents": [ 0.4, 1.0, 0.2 ],
+        "Origin": [ 0.0, 1.0, 0.0 ]
+      }
+    },
+    "SoundBankComponent": {
+      "SoundEffects": {
+        "Explosion": {
+          "FileName": "explosion.wav"
+        },
+        "Gun": {
+          "FileName": "photongun1.wav"
+        }
+      }
+    }
+  }
+}

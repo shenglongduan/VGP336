@@ -1,0 +1,8 @@
+{
+  "Components": {
+    "UISpriteComponent": {
+      "Texture": "Images/bird1.png",
+      "Position": [ 0,0 ]
+    }
+  }
+}

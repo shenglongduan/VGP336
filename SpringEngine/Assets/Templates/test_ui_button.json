@@ -1,0 +1,25 @@
+{
+  "Components": {
+    "UIButtonComponent": {
+      "Pivot": "Center",
+      "Default": {
+        "Texture": "Images/bird1.png",
+        "Scale": [ 1, 1, 1 ]
+      },
+      "Hover": {
+        "Texture": "Images/bird1.png",
+        "Scale": [ 1.5, 1.5, 1.5 ]
+      },
+      "Click": {
+        "Texture": "Images/bird1.png",
+        "Scale": [ 1, 1, 1 ],
+        "Color": [ 1, 1, 0, 1 ]
+      },
+      "Disabled": {
+        "Texture": "Images/bird1.png",
+        "Scale": [ 0.9, 0.9, 0.9 ],
+        "Color": [ 0.2, 0.2, 0.2, 1 ]
+      }
+    }
+  }
+}

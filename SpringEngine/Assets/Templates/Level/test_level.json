@@ -1,0 +1,74 @@
+{
+  "Capacity": 50,
+  "Services": {
+    "CameraService": {
+
+    },
+    "RenderService": {
+      "LightDirection": [ 1.0, -1.0, 1.0 ],
+      "ColorAmbient": [ 0.6, 0.6, 0.6, 1.0 ],
+      "ColorDiffuse": [ 0.8, 0.8, 0.8, 1.0 ],
+      "ColorSpecular": [ 0.9, 0.9, 0.9, 1.0 ]
+    },
+    "UpdateService": {
+
+    },
+    "CustomDebugDrawDisplayService": {
+
+    },
+    "UIRenderService": {
+
+    }
+  },
+  "GameObjects": {
+    "MainCamera": {
+      "Template": "../../Assets/Templates/fps_camera.json",
+      "CameraComponent": {
+        "Position": [ 0.0, 1.0, -4.0 ],
+        "LookAt": [ 0.0, 0.0, 0.0 ]
+      }
+    },
+    "Ground": {
+      "Template": "../../Assets/Templates/ground.json"
+    },
+    "TestObject0": {
+      "Template": "../../Assets/Templates/test_model2.json",
+      "TransformComponent": {
+        "Position": [ 0.0, 0.0, 0.0 ]
+      }
+    },
+    "TestObject1": {
+      "Template": "../../Assets/Templates/test_model.json",
+      "TransformComponent": {
+        "Position": [ 2.0, 0.0, 0.0 ]
+      }
+    },
+    "TestObject2": {
+      "Template": "../../Assets/Templates/test_model.json",
+      "TransformComponent": {
+        "Position": [ -2.0, 0.0, 0.0 ]
+      }
+    },
+    "TestObject3": {
+      "Template": "../../Assets/Templates/test_model.json",
+      "TransformComponent": {
+        "Position": [ 0.0, 0.0, 3.0 ]
+      }
+    },
+    "TestUISprite0": {
+      "Template": "../../Assets/Templates/test_ui_sprite.json",
+      "UISpriteComponent": {
+        "Position": [ 100, 100 ]
+      }
+    },
+    "TestUIButton0": {
+      "Template": "../../Assets/Templates/test_ui_button.json",
+      "UIButtonComponent": {
+        "Position": [ 200, 100 ]
+      }
+    },
+    "TestUIText0": {
+       "Template": "../../Assets/Templates/test_ui_text.json"
+    }
+  }
+}

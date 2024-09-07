@@ -1,0 +1,5 @@
+-scale 0.01 ../../Assets/Models/Character_1/Character01.fbx ../../Assets/Models/Character_1/Character01.fbx
+-scale 0.01 ../../Assets/Models/Character_2/Character_2.fbx ../../Assets/Models/Character_2/Character_2.fbx
+-scale 0.01 ../../Assets/Models/Jumping/Jumping.fbx ../../Assets/Models/Jumping/Jumping.fbx
+-scale 0.01 ../../Assets/Models/Finals/Move_1/Move_1.fbx ../../Assets/Models/Finals/Move_1/Move_1.fbx
+-scale 0.01 ../../Assets/Models/Finals/Samba/Samba.fbx ../../Assets/Models/Finals/Samba/Samba.fbx

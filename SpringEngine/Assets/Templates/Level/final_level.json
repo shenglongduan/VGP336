@@ -1,0 +1,54 @@
+{
+  "Capacity": 50,
+  "Services": {
+    "CameraService": {
+
+    },
+    "RenderService": {
+      "LightDirection": [ 0.0, 0.0, -1.0 ],
+      "ColorAmbient": [ 0.6, 0.6, 0.6, 1.0 ],
+      "ColorDiffuse": [ 0.8, 0.8, 0.8, 1.0 ],
+      "ColorSpecular": [ 0.9, 0.9, 0.9, 1.0 ]
+    },
+    "UpdateService": {
+
+    },
+    "CustomDebugDrawDisplayService": {
+
+    },
+    "UIRenderService": {
+
+    },
+    "PhysicsService": {
+
+    }
+  },
+  "GameObjects": {
+    "MainCamera": {
+      "Template": "../../Assets/Templates/simple_camera.json",
+      "CameraComponent": {
+        "Position": [ 0.5, 1.4, 1.3 ],
+        "LookAt": [ 0.0, 0.0, -10.0 ]
+      }
+    },
+    "Ground": {
+      "Template": "../../Assets/Templates/ground.json"
+    },
+    "TestObject0": {
+      "Template": "../../Assets/Templates/ball_model.json",
+      "TransformComponent": {
+        "Position": [ 0.0, 5.0, -1.0 ]
+      }
+    },
+    
+    "TestObject1": {
+      "Template": "../../Assets/Templates/throw_model.json",
+      "TransformComponent": {
+        "Position": [ 0.0, 0.0, 0.0 ]
+      },
+      "ThrowComponent": {
+        "ThrowObject": "TestObject0"
+      }
+    }
+  }
+}

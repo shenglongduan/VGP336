@@ -1,0 +1,123 @@
+{
+    "Capacity": 50,
+    "Services": {},
+    "GameObjects": {
+        "TestUIText0": {
+            "Template": "../../Assets/Templates/test_ui_text.json"
+        },
+        "TestUIButton0": {
+            "Template": "../../Assets/Templates/test_ui_button.json"
+        },
+        "TestUISprite0": {
+            "Template": "../../Assets/Templates/test_ui_sprite.json"
+        },
+        "TestObject3": {
+            "Template": "../../Assets/Templates/test_model.json",
+            "TransformComponent": {
+                "Position": [
+                    0.0,
+                    0.0,
+                    3.0
+                ],
+                "Rotation": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "Scale": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        "TestObject2": {
+            "Template": "../../Assets/Templates/test_model.json",
+            "TransformComponent": {
+                "Position": [
+                    -2.0,
+                    0.0,
+                    0.0
+                ],
+                "Rotation": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "Scale": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        "TestObject1": {
+            "Template": "../../Assets/Templates/test_model.json",
+            "TransformComponent": {
+                "Position": [
+                    2.0,
+                    0.0,
+                    0.0
+                ],
+                "Rotation": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "Scale": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        "TestObject0": {
+            "Template": "../../Assets/Templates/test_model2.json",
+            "TransformComponent": {
+                "Position": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Rotation": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "Scale": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        "Ground": {
+            "Template": "../../Assets/Templates/ground.json",
+            "TransformComponent": {
+                "Position": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Rotation": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "Scale": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        "MainCamera": {
+            "Template": "../../Assets/Templates/fps_camera.json"
+        }
+    }
+}

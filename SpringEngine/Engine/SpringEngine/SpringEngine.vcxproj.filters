@@ -144,6 +144,9 @@
     <ClInclude Include="Inc\SaveUtil.h">
       <Filter>Inc</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\ThrowComponent.h">
+      <Filter>Inc\Componets</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
@@ -232,6 +235,9 @@
     </ClCompile>
     <ClCompile Include="Src\UIRenderService.cpp">
       <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ThrowComponent.cpp">
+      <Filter>Src\Componets</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

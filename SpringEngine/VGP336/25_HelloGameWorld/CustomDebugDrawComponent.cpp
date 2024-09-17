@@ -13,6 +13,7 @@ void CustomDebugDrawComponent::Initialize()
 
 	UpdateService* updateService = GetOwner().GetWorld().GetService<UpdateService>();
 	updateService->Register(this);
+
 }
 
 void CustomDebugDrawComponent::Terminate()
@@ -25,29 +26,28 @@ void CustomDebugDrawComponent::Terminate()
 
 void CustomDebugDrawComponent::Update(float deltaTime)
 {
-	RigidBodyComponent* rigidBody = GetOwner().GetComponent<RigidBodyComponent>();
-	if (Input::InputSystem::Get()->IsKeyPressed(Input::KeyCode::SPACE))
-	{
-		SoundBankComPent* soundbank = GetOwner().GetComponent<SoundBankComPent>();
-		if (soundbank != nullptr)
-		{
-			soundbank->Play("Gun");
-		}
-		if (rigidBody != nullptr)
-		{
-			rigidBody->SetVelocity({ 0.0f, 10.0f, 0.0f });
-		}
-	}
+	// RigidBodyComponent* rigidBody = GetOwner().GetComponent<RigidBodyComponent>();
+	// if (Input::InputSystem::Get()->IsKeyPressed(Input::KeyCode::SPACE))
+	// {
+	// 	SoundBankComPent* soundbank = GetOwner().GetComponent<SoundBankComPent>();
+	// 	if (soundbank != nullptr)
+	// 	{
+	// 		soundbank->Play("Gun");
+	// 	}
+	// 	if (rigidBody != nullptr)
+	// 	{
+	// 		rigidBody->SetVelocity({ 0.0f, 10.0f, 0.0f });
+	// 	}
+	// }
 
-	if (Input::InputSystem::Get()->IsKeyDown(Input::KeyCode::UP))
-	{
-		rigidBody->SetVelocity({ 1.0f, 0.0f, 0.0f });
-	}
-	if (Input::InputSystem::Get()->IsKeyDown(Input::KeyCode::DOWN))
-	{
-		rigidBody->SetVelocity({ -1.0f, 0.0f, 0.0f });
-	}
-
+	// if (Input::InputSystem::Get()->IsKeyDown(Input::KeyCode::UP))
+	// {
+	// 	rigidBody->SetVelocity({ 5.0f, 5.0f, 0.0f });
+	// }
+	// if (Input::InputSystem::Get()->IsKeyDown(Input::KeyCode::DOWN))
+	// {
+	// 	rigidBody->SetVelocity({ -1.0f, 0.0f, 0.0f });
+	// }
 }
 
 void CustomDebugDrawComponent::AddDebugDraw()
@@ -90,5 +90,12 @@ void CustomDebugDrawComponent::Deserialize(const rapidjson::Value& value)
 		mColor.g = color[1].GetFloat();
 		mColor.b = color[2].GetFloat();
 		mColor.a = color[3].GetFloat();
+	}
+	if (value.HasMember("Velocity"))
+	{
+		auto pos = value["Velocity"].GetArray();
+		mVelocity.x = pos[0].GetFloat();
+		mVelocity.y = pos[1].GetFloat();
+		mVelocity.z = pos[2].GetFloat();
 	}
 }

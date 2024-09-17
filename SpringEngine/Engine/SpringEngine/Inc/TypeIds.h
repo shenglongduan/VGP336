@@ -17,7 +17,8 @@ namespace SpringEngine
 		UISprite,               //Adds a sprite to the UI
 		UIButton,               //Adds a button to the UI
 		UIText,                 // Adds a text to the UI
-
+		Throw,
+		
 		Count
 	};
 

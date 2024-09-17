@@ -16,7 +16,13 @@ void AnimatorComponent::Initialize()
     UpdateService* updateService = GetOwner().GetWorld().GetService<UpdateService>();
     updateService->Register(this);
 
-    mAnimator.PlayAnimation(mStartPlayIndex, true);
+    if (mIdle) {
+        mAnimator.PlayAnimation(mStartPlayIndex, false);
+        mAnimator.Stop();
+    } else {
+        mAnimator.PlayAnimation(mStartPlayIndex, true);
+    }
+
 }
 
 void AnimatorComponent::Terminate()
@@ -50,6 +56,11 @@ void AnimatorComponent::Deserialize(const rapidjson::Value& value)
     {
         mStartPlayIndex = value["StartPlayIndex"].GetInt();
     }
+    if (value.HasMember("Idle"))
+    {
+        mIdle = value["Idle"].GetBool();
+    }
+    
 }
 
 bool AnimatorComponent::Play(int index, bool looping)
@@ -66,4 +77,12 @@ Graphics::Animator& AnimatorComponent::GetAnimator()
 const Graphics::Animator& AnimatorComponent::GetAnimator() const
 {
     return mAnimator;
+}
+
+void AnimatorComponent::AddKeyFrame(int frame, std::function<void()> callback) {
+    mAnimator.AddKeyFrame(frame, callback);
+}
+
+int AnimatorComponent::GetStartPlayIndex() {
+    return mStartPlayIndex;
 }

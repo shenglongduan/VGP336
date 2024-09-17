@@ -171,6 +171,7 @@
     <ClInclude Include="Inc\SaveUtil.h" />
     <ClInclude Include="Inc\Service.h" />
     <ClInclude Include="Inc\SpringEngine.h" />
+    <ClInclude Include="Inc\ThrowComponent.h" />
     <ClInclude Include="Inc\TransformComponent.h" />
     <ClInclude Include="Inc\TypeIds.h" />
     <ClInclude Include="Inc\UIButtonComponent.h" />
@@ -209,6 +210,7 @@
     <ClCompile Include="src\SoundBankComponent.cpp" />
     <ClCompile Include="src\SoundEffectComponent.cpp" />
     <ClCompile Include="Src\SpringEngine.cpp" />
+    <ClCompile Include="Src\ThrowComponent.cpp" />
     <ClCompile Include="Src\TransformComponent.cpp" />
     <ClCompile Include="Src\UIButtonComponent.cpp" />
     <ClCompile Include="Src\UIRenderService.cpp" />

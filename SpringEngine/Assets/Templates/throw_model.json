@@ -1,0 +1,38 @@
+{
+  "Components": {
+    "TransformComponent": {
+      "Position": [ 0.0, 0.0, 0.0 ],
+      "Rotation": [ 0.0, 0.0, 0.0, 1.0 ],
+      "Scale": [ 1.0, 1.0, 1.0 ]
+    },
+    "ModelComponent": {
+      "CastShadow": true,
+      "FileName": "../../Assets/Models/Throw/Throw.model",
+      "Animation": [
+        "../../Assets/Models/Finals/Throw/Throw.animset"
+      ]
+    },
+    "AnimatorComponent": {
+      "StartPlayIndex": 0,
+      "Idle": true
+    },
+    "ThrowComponent": {
+      "StartPlayIndex": 0,
+      "ThrowFrame": 45,
+      "ThrowVelocity": [0.0, 3.0, -3.0],
+      "ThrowPosition": [-0.15, 1.45, 0.0]
+    },
+    "RigidBodyComponent": {
+      "Mass": 100.0,
+      "ColliderData": {
+        "Shape": "Hull",
+        "HalfExtents": [ 0.4, 1.0, 0.2 ],
+        "Origin": [ 0.0, 1.0, 0.0 ]
+      }
+    },
+    "CameraComponent": {
+      "Position": [ 0.089, 1.276, -0.207 ],
+      "LookAt": [ 0.118, 1.253, -1.164 ]
+    }
+  }
+}

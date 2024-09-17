@@ -16,7 +16,7 @@
 #include "UIButtonComponent.h"
 #include "UISpriteComponent.h"
 #include "UITextComponent.h"
-
+#include "ThrowComponent.h"
 using namespace SpringEngine;
 namespace rj = rapidjson;
 
@@ -28,7 +28,18 @@ namespace
 
 	Component* AddComponent(const std::string& componentName, GameObject& gameObject)
 	{
-		Component* component = TryMake(componentName, gameObject);
+		Component* component = nullptr;
+
+		// 检查 TryMake 是否已经被设置
+		if (TryMake)
+		{
+			component = TryMake(componentName, gameObject);
+			if (component != nullptr)
+			{
+				LOG("Custom component %s was added successfully", componentName.c_str());
+				return component;
+			}
+		}
 		if (component != nullptr)
 		{
 			LOG("Custom component %s was added successfuly", componentName.c_str());
@@ -84,6 +95,10 @@ namespace
 		else if (componentName == "UITextComponent")
 		{
 			component = gameObject.AddComponent<UITextComponent>();
+		}
+		else if (componentName == "ThrowComponent")
+		{
+			component = gameObject.AddComponent<ThrowComponent>();
 		}
 		else
 		{

@@ -12,6 +12,7 @@ namespace SpringEngine
 
 		const Graphics::Camera& GetMain() const;
 		void SetMainCamera(uint32_t index);
+		void SwitchMainCamera();
 	private:
 		friend class CameraComponent;
 		void Register(const CameraComponent* cameraComponent);
@@ -20,5 +21,6 @@ namespace SpringEngine
 		using CameraEntries = std::vector<const CameraComponent*>;
 		CameraEntries mCameraEntries;
 		const CameraComponent* mMainCamera = nullptr;
+		size_t mNowCamera = 0;
 	};
 }

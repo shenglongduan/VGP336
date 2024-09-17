@@ -9,6 +9,12 @@ using namespace SpringEngine::Graphics;
 void CameraService::DebugUI()
 {
 	SimpleDraw::Render(GetMain());
+	std::string imguiName = "Position##c";
+	Math::Vector3 position = mMainCamera->GetCamera().GetPosition();
+	ImGui::DragFloat3(imguiName.c_str(), &position.x);
+	imguiName = "Lookat##c";
+	Math::Vector3 direction = mMainCamera->GetCamera().GetDirection() + mMainCamera->GetCamera().GetPosition();
+	ImGui::DragFloat3(imguiName.c_str(), &direction.x);
 }
 
 const Camera& SpringEngine::CameraService::GetMain() const
@@ -21,9 +27,17 @@ void  CameraService::SetMainCamera(uint32_t index)
 {	  
 	if (index < mCameraEntries.size())
 	{
+		mNowCamera = index;
 		mMainCamera = mCameraEntries[index];
 	}
-}	  
+}
+
+void SpringEngine::CameraService::SwitchMainCamera()
+{
+	mNowCamera++;
+	mNowCamera %= mCameraEntries.size();
+	mMainCamera = mCameraEntries[mNowCamera];
+}
 	  
 void  CameraService::Register(const CameraComponent* cameraComponent)
 {	 

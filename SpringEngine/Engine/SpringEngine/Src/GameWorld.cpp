@@ -13,6 +13,9 @@
 #include "UIButtonComponent.h"
 #include "UISpriteComponent.h"
 #include "UITextComponent.h"
+#include "RigidBodyComponent.h"
+#include "ThrowComponent.h"
+
 
 #include "SaveUtil.h"
 
@@ -177,6 +180,7 @@ void GameWorld::LoadLevel(const std::filesystem::path& levelFile)
 		GameObject* obj = CreateGameObject(templateFile, name);
 		if (obj != nullptr)
 		{
+			//std::string s = gameObject.value
 			if (gameObject.value.HasMember("TransformComponent"))
 			{
 				TransformComponent* transformComponent = obj->GetComponent<TransformComponent>();
@@ -216,9 +220,30 @@ void GameWorld::LoadLevel(const std::filesystem::path& levelFile)
 					uiTextComponent->Deserialize(gameObject.value["UITextComponent"].GetObj());
 				}
 			}
+			if (gameObject.value.HasMember("RigidBodyComponent"))
+			{
+				RigidBodyComponent* rigidBodyComponent = obj->GetComponent<RigidBodyComponent>();
+				if (rigidBodyComponent != nullptr)
+				{
+					rigidBodyComponent->Deserialize(gameObject.value["RigidBodyComponent"].GetObj());
+					 
+				}
+			}
+			if (gameObject.value.HasMember("ThrowComponent"))
+			{
+				ThrowComponent* throwComponent = obj->GetComponent<ThrowComponent>();
+				if (throwComponent != nullptr)
+				{
+					throwComponent->Deserialize(gameObject.value["ThrowComponent"].GetObj());
+					 
+				}
+			}
+
+
 			obj->Initialize();
 		}
 	}
+
 }
 void GameWorld::SaveLevel(std::filesystem::path saveFile)
 {

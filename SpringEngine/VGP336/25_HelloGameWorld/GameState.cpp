@@ -33,7 +33,7 @@ void GameState::Initialize()
 {
 	GameObjectFactory::SetCustomMake(CustomComponentMake);
 	GameWorld::SetCustomService(CustomServiceMake);
-	mGameWorld.LoadLevel("../../Assets/Templates/Level/test_level.json");
+	mGameWorld.LoadLevel("../../Assets/Templates/Level/final_level.json");
 }
 void GameState::Terminate()
 {
@@ -42,6 +42,10 @@ void GameState::Terminate()
 void GameState::Update(const float deltaTime)
 {
 	mGameWorld.Update(deltaTime);
+	if (Input::InputSystem::Get()->IsKeyDown(Input::KeyCode::L))
+	{
+		mGameWorld.SaveLevel("./test.json");
+	}
 }
 void GameState::Render()
 {

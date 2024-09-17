@@ -23,7 +23,7 @@
       "Color": [ 1.0, 1.0, 0.0, 1.0 ]
     },
     "RigidBodyComponent": {
-      "Mass": 10.0,
+      "Mass": 100.0,
       "ColliderData": {
         "Shape": "Hull",
         "HalfExtents": [ 0.4, 1.0, 0.2 ],

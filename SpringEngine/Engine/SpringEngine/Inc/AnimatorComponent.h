@@ -19,8 +19,11 @@ namespace SpringEngine
 		Graphics::Animator& GetAnimator();
 		const Graphics::Animator& GetAnimator() const;
 
+		void AddKeyFrame(int frame, std::function<void()> callback);
+		int GetStartPlayIndex();
 	private:
 		int mStartPlayIndex = -1;
 		Graphics::Animator mAnimator;
+		bool mIdle = false;
 	};
 }

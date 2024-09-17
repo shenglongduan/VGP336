@@ -13,10 +13,15 @@ namespace SpringEngine
 		void Terminate() override;
 		virtual void Deserialize(const rapidjson::Value& value) override;
 
+		void Update(float deltaTime) override;
+
 		Graphics::Camera& GetCamera();
 		const Graphics::Camera& GetCamera() const;
 
 	private:
 		Graphics::Camera mCamera;
+		Math::Vector3 mRelativePosition = Math::Vector3::Zero;
+
+		bool mIsAdhere = false;
 	};
 }

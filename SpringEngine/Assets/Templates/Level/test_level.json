@@ -18,6 +18,9 @@
     },
     "UIRenderService": {
 
+    },
+    "PhysicsService": {
+
     }
   },
   "GameObjects": {

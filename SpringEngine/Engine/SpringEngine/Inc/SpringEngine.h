@@ -18,6 +18,7 @@
 
 // components
 #include "AnimatorComponent.h"
+#include "ThrowComponent.h"
 #include "CameraComponent.h"
 #include "Component.h"
 #include "FPSCameraComponent.h"

@@ -54,3 +54,8 @@ void SpringEngine::TransformComponent::Deserialize(const rapidjson::Value& value
 		scale.z = s[2].GetFloat();
 	}
 }
+
+Math::Vector3 SpringEngine::TransformComponent::GetPosition()
+{
+	return position;
+}

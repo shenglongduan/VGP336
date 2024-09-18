@@ -18,6 +18,7 @@ public:
 private:
 	SpringEngine::TransformComponent* mTransformComponent = nullptr;
 	SpringEngine::Math::Vector3 mPosition = SpringEngine::Math::Vector3::Zero;
+	SpringEngine::Math::Vector3 mVelocity = SpringEngine::Math::Vector3::Zero;
 	SpringEngine::Color mColor = SpringEngine::Colors::White;
 	uint32_t mSlices = 0;
 	uint32_t mRings = 0;

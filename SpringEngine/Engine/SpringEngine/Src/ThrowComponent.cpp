@@ -51,6 +51,10 @@ void ThrowComponent::Update(float deltaTime)
         mAnimator->Start();
         mAnimator->PlayAnimation(mStartPlayIndex, false);
 	}
+
+    // if active
+    // camera component
+    // cameracomponent->syncposition()
 }
 
 void ThrowComponent::DebugUI()

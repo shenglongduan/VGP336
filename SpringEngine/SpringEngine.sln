@@ -124,6 +124,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 		Assets\Templates\test_ui_button.json = Assets\Templates\test_ui_button.json
 		Assets\Templates\test_ui_Sprite.json = Assets\Templates\test_ui_Sprite.json
 		Assets\Templates\test_ui_text.json = Assets\Templates\test_ui_text.json
+		Assets\Templates\throw_model.json = Assets\Templates\throw_model.json
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "24_HelloGameObjectFactory", "VGP336\24_HelloGameObjectFactory\24_HelloGameObjectFactory.vcxproj", "{EDB21F19-792E-43FF-99D9-2060E4FC3DA6}"
@@ -132,6 +133,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "25_HelloGameWorld", "VGP336
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level", "Level", "{CFA23AF9-730D-49CE-9ED3-3129A93F7AEB}"
 	ProjectSection(SolutionItems) = preProject
+		Assets\Templates\ball_model.json = Assets\Templates\ball_model.json
+		Assets\Templates\Level\final_level.json = Assets\Templates\Level\final_level.json
 		Assets\Templates\ground.json = Assets\Templates\ground.json
 		Assets\Templates\Level\test_level.json = Assets\Templates\Level\test_level.json
 		Assets\Templates\Level\text_edit_level.json = Assets\Templates\Level\text_edit_level.json
